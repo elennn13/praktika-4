@@ -39,11 +39,11 @@ int index_sum(int array1[], int array2[], int length1, int length2, int index) {
 	}
 	return array1[index] + array2[index];
 }
-//3 ТЮ-ТЮ :)
 
 
 
 //4
+
 int compar_pare(const int arr[], int length, int num1, int num2) {
 	for (int i = 0; i < length - 1; i++) {
 		if (arr[i] == num1 && arr[i + 1] == num2) {
@@ -117,9 +117,10 @@ int main() {
 	// оба этих числа и они стоят рядом друг с другом в том же
 	// порядке, в котором они были переданы в функцию, то функция
 	// возвращает индекс первого из них.Иначе возвращается - 1.
-	
-	int arr4[] = { 1,2,3,4 };
-	int size4 = sizeof(arr4) / sizeof(arr4[0]);
+	const int size4 = 10;
+	int arr4[size4];
+	fill_arr(arr4, size4, 10, 21);
+	print_arr(arr4, size4);
 	std::cout << "Введите первое число -> ";
 	std::cin >> n;
 	std::cout << "Введите второе число -> ";
@@ -132,8 +133,8 @@ int main() {
 		std::cout << " Числа не стоят рядом друг с другом или отсутствуют в массиве " << std::endl;
 	}
 		else {
-		std::cout << " Числа " << n << " " << m << " стоят рядом " << std::endl;
+		std::cout << " Числа " << n << " " << m << " стоят рядом на позиции " << index << std::endl;
 		}
-		
+	
 	return 0;
 }
